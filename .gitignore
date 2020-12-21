@@ -62,7 +62,7 @@ typings/
 .env
 
 # the generated output
-/@riotjs/register.js
+/register.js
 
 # editor config files
 .idea/
