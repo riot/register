@@ -1,13 +1,21 @@
-import { expect } from 'chai'
-import teardown from '..'
+const { expect } = require('chai')
+const register = require('../')
 
 describe('Core Specs', () => {
+  const unregister = register({
+    exts: ['.riot', '.tag']
+  })
+
   it('Riot modules can be properly imported', () => {
     expect(require('./test.riot')).to.be.ok
   })
 
+  it('Can require legacy .tag file', () => {
+    expect(require('./legacy.tag')).to.be.ok
+  })
+
   it('Tear down function works as expected', () => {
-    teardown()
+    unregister()
     expect(() => require('./test.riot')).to.throw
   })
 })

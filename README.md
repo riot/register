@@ -1,7 +1,15 @@
 # @riotjs/register
 
-Allow .riot files importing in node.
-This module is a syntax sugar for [`@riotjs/ssr/register`](https://github.com/riot/ssr#register---to-load-riot-components-in-node) 
+Allow `.riot` files importing in node.
+
+**Notice**: you can't import directly `.riot` files in [deno](https://github.com/denoland/deno/issues/1739) yet.
+In that case you will need to compile your tags first
+
+[![Build Status][ci-image]][ci-url]
+
+[![NPM version][npm-version-image]][npm-url]
+[![NPM downloads][npm-downloads-image]][npm-url]
+[![MIT License][license-image]][license-url] 
 
 ## Installation
 
@@ -22,7 +30,10 @@ require('@riotjs/register')
 If you need to disable the `.riot` files import you can use the teardown function exported:
 
 ```js
-const teardown = require('@riotjs/register')
+const register = require('@riotjs/register')
+
+// create the optional teardown function
+const teardown = register()
 
 // import you riot files here
 const App = require('./app.riot')
@@ -35,5 +46,16 @@ require('./app.riot')
 ```
 
 If you use `mocha` for your unit tests you can require it with the `mocha -r @riotjs/register` 
+
+[ci-image]:https://img.shields.io/github/workflow/status/riot/register/test?style=flat-square
+[ci-url]:https://github.com/riot/register/actions
+
+[license-image]:http://img.shields.io/badge/license-MIT-000000.svg?style=flat-square
+[license-url]:LICENSE
+
+[npm-version-image]:http://img.shields.io/npm/v/@riotjs/register.svg?style=flat-square
+[npm-downloads-image]:http://img.shields.io/npm/dm/@riotjs/register.svg?style=flat-square
+[npm-url]:https://npmjs.org/package/@riotjs/register
+
 
 
