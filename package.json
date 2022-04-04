@@ -41,5 +41,5 @@
     "test": "npm run lint && mocha -r ./register.js test/autoregister.spec.js && mocha test/core.spec.js",
     "prepublishOnly": "npm run build && npm run test"
   },
-  "version": "5.0.0"
+  "version": "6.0.0"
 }
