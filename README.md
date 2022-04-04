@@ -19,10 +19,10 @@ npm i @riotjs/register @riotjs/compiler
 
 ## Usage
 
-You can enable the `.riot` files import by simply requiring this script in the main file of your project
+You can enable the `.riot` files import by simply preloading this module
 
-```js
-require('@riotjs/register')
+```shell
+node -r @riotjs/register your-app.js
 ```
 
 ### Advanced usage
