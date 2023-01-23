@@ -47,7 +47,7 @@ require('./app.riot')
 
 If you use `mocha` for your unit tests you can require it with the `mocha -r @riotjs/register` 
 
-[ci-image]:https://img.shields.io/github/workflow/status/riot/register/test?style=flat-square
+[ci-image]:https://img.shields.io/github/actions/workflow/status/riot/register/test.yml?style=flat-square
 [ci-url]:https://github.com/riot/register/actions
 
 [license-image]:http://img.shields.io/badge/license-MIT-000000.svg?style=flat-square
