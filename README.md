@@ -2,7 +2,7 @@
 
 Allow `.riot` files importing in node.
 
-**Notice**: you can't import directly `.riot` files in [deno](https://github.com/denoland/deno/issues/1739) yet.
+**Note**: you can't import directly `.riot` files in [deno](https://github.com/denoland/deno/issues/1739) yet.
 In that case you will need to compile your tags first
 
 [![Build Status][ci-image]][ci-url]
