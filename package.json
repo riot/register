@@ -1,45 +1,38 @@
 {
   "author": "Gianluca Guarini https://github.com/GianlucaGuarini",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/gianlucaguarini/riot/register/issues"
   },
   "files": [
-    "src",
-    "register.js"
+    "src"
   ],
   "description": "Allow .riot file importing in node",
   "devDependencies": {
-    "@gianlucaguarini/eslint-config": "^2.0.0",
-    "@riotjs/compiler": "^6.1.3",
-    "chai": "^4.3.6",
-    "eslint": "^8.12.0",
-    "mocha": "^9.2.2",
-    "rollup": "^2.70.1"
-  },
-  "dependencies": {
-    "@babel/core": "^7.17.8",
-    "@babel/preset-env": "^7.16.11",
-    "pirates": "^4.0.5"
+    "@riotjs/compiler": "^9.0.1",
+    "@riotjs/prettier-config": "^1.1.0",
+    "eslint": "^8.45.0",
+    "eslint-config-riot": "^4.1.0",
+    "prettier": "^3.0.0"
   },
   "peerDependencies": {
     "@riotjs/compiler": "^6.1.3"
   },
   "homepage": "https://github.com/gianlucaguarini/riot/register#readme",
   "license": "MIT",
-  "main": "register.js",
-  "module": "src/index.js",
   "name": "@riotjs/register",
+  "exports": {
+    "import": "./src/index.js"
+  },
   "sideEffects": false,
   "repository": {
     "type": "git",
     "url": "git://github.com/gianlucaguarini/riot/register.git"
   },
   "scripts": {
-    "lint": "eslint src test",
-    "build": "rollup -c",
-    "pretest": "npm run build",
-    "test": "npm run lint && mocha -r ./register.js test/autoregister.spec.js && mocha test/core.spec.js",
-    "prepublishOnly": "npm run build && npm run test"
+    "lint": "prettier -c ./ && eslint src test --ext .cjs,.js",
+    "test": "npm run lint && node --loader ./src/index.js test/core.spec.js",
+    "prepublishOnly": "npm run test"
   },
   "version": "6.0.1"
 }

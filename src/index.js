@@ -1,20 +1,24 @@
-import { addHook } from 'pirates'
-import compile from './compile'
+import { compile } from '@riotjs/compiler'
 
-// returns the teardown function
-export default function register(options) {
-  return addHook(compile,
-    {
-      exts: ['.riot'],
-      ignoreNodeModules: false,
-      ...options
-    }
-  )
+// Only module format is supported
+const format = 'module'
+
+export async function load(url, context, nextLoad) {
+  // non riot files will be skipped
+  if (!/\.riot$/.test(url)) return nextLoad(url)
+
+  // get the source code of the riot file
+  const { source } = await nextLoad(url, {
+    ...context,
+    format,
+  })
+
+  // compile the code and generate the esm output
+  const { code } = compile(source.toString(), { file: url })
+
+  return {
+    format,
+    shortCircuit: true,
+    source: code,
+  }
 }
-
-// autoregister the .riot file import if this file gets required without any explicit require call
-if (typeof module !== 'undefined' && !module.parent) {
-  register()
-}
-
-

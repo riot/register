@@ -1,21 +1,6 @@
-const { expect } = require('chai')
-const register = require('../')
+import assert from 'node:assert/strict'
 
-describe('Core Specs', () => {
-  const unregister = register({
-    exts: ['.riot', '.tag']
-  })
+const component = await import('./test.riot')
+assert.ok(component)
 
-  it('Riot modules can be properly imported', () => {
-    expect(require('./test.riot')).to.be.ok
-  })
-
-  it('Can require legacy .tag file', () => {
-    expect(require('./legacy.tag')).to.be.ok
-  })
-
-  it('Tear down function works as expected', () => {
-    unregister()
-    expect(() => require('./test.riot')).to.throw
-  })
-})
+console.log('All test passed :)')
