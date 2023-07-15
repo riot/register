@@ -34,5 +34,5 @@
     "test": "npm run lint && node --loader ./src/index.js test/core.spec.js",
     "prepublishOnly": "npm run test"
   },
-  "version": "6.0.1"
+  "version": "9.0.0"
 }
