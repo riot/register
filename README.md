@@ -1,6 +1,6 @@
 # @riotjs/register
 
-Allow `.riot` files importing in node.
+Allow the import of `.riot` files importing in node.
 
 **Note**: you can't import directly `.riot` files in [deno](https://github.com/denoland/deno/issues/1739) yet.
 In that case you will need to compile your tags first
@@ -19,7 +19,7 @@ npm i @riotjs/register @riotjs/compiler
 
 ## Usage
 
-You can enable the import of `.riot` files passing this loader to riot as follows:
+You can enable the import of `.riot` files as follows:
 
 ```shell
 node --loader @riotjs/register your-app.js
