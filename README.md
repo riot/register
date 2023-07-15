@@ -25,7 +25,7 @@ You can enable the import of `.riot` files as follows:
 node --loader @riotjs/register your-app.js
 ```
 
-This loader supports only [`type=module`](https://nodejs.org/api/packages.html#packagejson-and-file-extensions) projects. 
+This loader supports only [`type=module`](https://nodejs.org/api/packages.html#packagejson-and-file-extensions) projects.
 
 [ci-image]: https://img.shields.io/github/actions/workflow/status/riot/register/test.yml?style=flat-square
 [ci-url]: https://github.com/riot/register/actions
