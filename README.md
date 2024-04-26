@@ -40,7 +40,7 @@ This loader supports only [`type=module`](https://nodejs.org/api/packages.html#p
 
 ## Custom file extensions
 
-To use custom file extensions (instead of `.riot`) for your Riot.js components 
+To use custom file extensions (instead of `.riot`) for your Riot.js components
 you need to set the `RIOT_COMPONENTS_FILE_EXTENSION`environment variable as follows:
 
 ```shell
