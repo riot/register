@@ -31,7 +31,7 @@
   },
   "scripts": {
     "lint": "prettier -c ./ && eslint src test --ext .cjs,.js",
-    "test": "npm run lint && node --import ./test/setup.js test/core.spec.js",
+    "test": "npm run lint && node --import ./test/setup.js test/core.spec.js && RIOT_COMPONENTS_FILE_EXTENSION=.html node --import ./test/setup.js test/custom-extension.spec.js",
     "prepublishOnly": "npm run test"
   },
   "version": "9.0.0"
