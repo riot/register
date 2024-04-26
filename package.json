@@ -9,11 +9,11 @@
   ],
   "description": "Allow .riot file importing in node",
   "devDependencies": {
-    "@riotjs/compiler": "^9.0.1",
+    "@riotjs/compiler": "^9.0.9",
     "@riotjs/prettier-config": "^1.1.0",
-    "eslint": "^8.45.0",
-    "eslint-config-riot": "^4.1.0",
-    "prettier": "^3.0.0"
+    "eslint": "^8.57.0",
+    "eslint-config-riot": "^4.1.2",
+    "prettier": "^3.2.5"
   },
   "peerDependencies": {
     "@riotjs/compiler": "^9.0.0"
@@ -31,7 +31,7 @@
   },
   "scripts": {
     "lint": "prettier -c ./ && eslint src test --ext .cjs,.js",
-    "test": "npm run lint && node --loader ./src/index.js test/core.spec.js",
+    "test": "npm run lint && node --import ./test/setup.js test/core.spec.js",
     "prepublishOnly": "npm run test"
   },
   "version": "9.0.0"
