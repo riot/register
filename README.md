@@ -21,8 +21,10 @@ npm i @riotjs/register @riotjs/compiler
 
 You can enable the import of `.riot` files as follows:
 
-```shell
-node --loader @riotjs/register your-app.js
+```js
+import { pathToFileURL } from "node:url";
+
+register('@riotjs/register', pathToFileURL('./'))
 ```
 
 This loader supports only [`type=module`](https://nodejs.org/api/packages.html#packagejson-and-file-extensions) projects.
