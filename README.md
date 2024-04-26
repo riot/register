@@ -38,6 +38,15 @@ Where `register-riot.js` is the file where you have pasted the module loader exa
 
 This loader supports only [`type=module`](https://nodejs.org/api/packages.html#packagejson-and-file-extensions) projects.
 
+## Custom file extensions
+
+To use custom file extensions (instead of `.riot`) for your Riot.js components 
+you need to set the `RIOT_COMPONENTS_FILE_EXTENSION`environment variable as follows:
+
+```shell
+RIOT_COMPONENTS_FILE_EXTENSION=.html node --import ./register-riot.js your-program.js
+```
+
 [ci-image]: https://img.shields.io/github/actions/workflow/status/riot/register/test.yml?style=flat-square
 [ci-url]: https://github.com/riot/register/actions
 [license-image]: http://img.shields.io/badge/license-MIT-000000.svg?style=flat-square
