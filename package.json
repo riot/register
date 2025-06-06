@@ -34,5 +34,5 @@
     "test": "npm run lint && node --import ./test/setup.js test/core.spec.js && RIOT_COMPONENTS_FILE_EXTENSION=.html node --import ./test/setup.js test/custom-extension.spec.js",
     "prepublishOnly": "npm run test"
   },
-  "version": "9.1.0"
+  "version": "10.0.0-beta.1"
 }
