@@ -18,7 +18,7 @@
   "peerDependencies": {
     "@riotjs/compiler": "^10.0.0-beta.1"
   },
-  "homepage": "https://github.com/gianlucaguarini/riot/register#readme",
+  "homepage": "https://github.com/riot/register#readme",
   "license": "MIT",
   "name": "@riotjs/register",
   "exports": {
@@ -27,7 +27,7 @@
   "sideEffects": false,
   "repository": {
     "type": "git",
-    "url": "git://github.com/gianlucaguarini/riot/register.git"
+    "url": "git://github.com/riot/register.git"
   },
   "scripts": {
     "lint": "prettier -c ./ && eslint src test --ext .js",
