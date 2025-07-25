@@ -9,11 +9,11 @@
   ],
   "description": "Allow .riot file importing in node",
   "devDependencies": {
-    "@riotjs/compiler": "^10.0.0-beta.1",
+    "@riotjs/compiler": "^10.0.0-beta.2",
     "@riotjs/prettier-config": "^1.1.0",
-    "eslint": "^9.28.0",
+    "eslint": "^9.32.0",
     "eslint-config-riot": "^5.0.2",
-    "prettier": "^3.5.3"
+    "prettier": "^3.6.2"
   },
   "peerDependencies": {
     "@riotjs/compiler": "^10.0.0-beta.1"
