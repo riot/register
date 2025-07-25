@@ -16,7 +16,7 @@
     "prettier": "^3.6.2"
   },
   "peerDependencies": {
-    "@riotjs/compiler": "^10.0.0-beta.1"
+    "@riotjs/compiler": "^10.0.0-beta.2"
   },
   "homepage": "https://github.com/riot/register#readme",
   "license": "MIT",
