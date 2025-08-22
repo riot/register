@@ -9,14 +9,14 @@
   ],
   "description": "Allow .riot file importing in node",
   "devDependencies": {
-    "@riotjs/compiler": "^10.0.0-beta.2",
+    "@riotjs/compiler": "^10.0.0",
     "@riotjs/prettier-config": "^1.1.0",
-    "eslint": "^9.32.0",
+    "eslint": "^9.33.0",
     "eslint-config-riot": "^5.0.2",
     "prettier": "^3.6.2"
   },
   "peerDependencies": {
-    "@riotjs/compiler": "^10.0.0-beta.2"
+    "@riotjs/compiler": "^9.0.0 || ^10.0.0"
   },
   "homepage": "https://github.com/riot/register#readme",
   "license": "MIT",
